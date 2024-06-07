@@ -1,6 +1,6 @@
 {
   "name": "random-joke-visualizer",
-  "version": "0.2.16",
+  "version": "1.0.0",
   "description": "Component to render a random joke.",
   "main": "./dist/index.js",
   "types": "./dist/index.d.ts",
@@ -12,11 +12,16 @@
     "type": "git",
     "url": "git+https://github.com/ferreirasara/random-joke-visualizer.git"
   },
+  "bugs": {
+    "url": "https://github.com/ferreirasara/random-joke-visualizer/issues"
+  },
+  "homepage": "https://github.com/ferreirasara/random-joke-visualizer#readme",
   "keywords": [
     "random joke",
-    "react compoenent"
+    "joke",
+    "react component"
   ],
-  "author": "Sara Cristina Ferreira",
+  "author": "Sara Cristina Ferreira <ferreirasara1501@gmail.com>",
   "license": "ISC",
   "dependencies": {
     "@types/react": "^18.3.3",
