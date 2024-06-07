@@ -7,7 +7,7 @@ interface Joke {
   punchline: string;
   id: number;
 }
-export const RandomJokeVisualizer = () => {
+export const RandomJokeVisualizer: React.FC = () => {
   const [joke, setJoke] = useState<Joke | undefined>(undefined);
 
   const fetchJoke = useCallback(async () => {
@@ -24,7 +24,7 @@ export const RandomJokeVisualizer = () => {
   }, [fetchJoke]);
 
   return (
-    joke ? <div style={{
+    <div style={{
       'display': 'flex',
       'flexDirection': 'column',
       'gap': '10px',
@@ -33,12 +33,14 @@ export const RandomJokeVisualizer = () => {
       'width': 'fit-content',
       'padding': '10px',
     }}>
-      <strong>
-        {joke?.setup}
-      </strong>
-      <i>
-        {joke?.punchline}
-      </i>
-    </div > : null
+      {joke ? <>
+        <strong>
+          {joke?.setup}
+        </strong>
+        <i>
+          {joke?.punchline}
+        </i>
+      </> : <i>No joke yet.</i>}
+    </div>
   )
 }
