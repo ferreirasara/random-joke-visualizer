@@ -1,6 +1,6 @@
 {
   "name": "random-joke-visualizer",
-  "version": "0.2.1",
+  "version": "0.2.2",
   "description": "Component to render a random joke.",
   "main": "./dist/index.js",
   "types": "./dist/index.d.ts",
@@ -18,15 +18,15 @@
   ],
   "author": "Sara Cristina Ferreira",
   "peerDependencies": {
-    "@types/react": "^18.x",
-    "@types/react-dom": "^18.x",
     "react": "^18.x",
-    "react-dom": "^18.x",
-    "typescript": "^5.x"
+    "react-dom": "^18.x"
   },
   "devDependencies": {
+    "@types/react": "^18.3.3",
+    "@types/react-dom": "^18.3.0",
     "autoprefixer": "^10.4.19",
-    "tsup": "^8.1.0"
+    "tsup": "^8.1.0",
+    "typescript": "^5.4.5"
   },
   "license": "ISC"
 }
