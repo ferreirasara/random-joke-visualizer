@@ -1,1 +1,1 @@
-export * from "./components/RandomJokeVisualizer";
+export { RandomJokeVisualizer } from "./components/RandomJokeVisualizer";

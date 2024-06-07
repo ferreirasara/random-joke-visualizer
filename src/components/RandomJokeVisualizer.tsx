@@ -7,7 +7,7 @@ interface Joke {
   punchline: string;
   id: number;
 }
-const RandomJokeVisualizer: React.FC = () => {
+export const RandomJokeVisualizer: React.FC = () => {
   const [joke, setJoke] = useState<Joke | undefined>(undefined);
 
   const fetchJoke = useCallback(async () => {
@@ -44,5 +44,3 @@ const RandomJokeVisualizer: React.FC = () => {
     </div>
   )
 }
-
-export default RandomJokeVisualizer;
