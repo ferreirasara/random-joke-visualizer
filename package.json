@@ -1,6 +1,6 @@
 {
   "name": "random-joke-visualizer",
-  "version": "0.2.14",
+  "version": "0.2.15",
   "description": "Component to render a random joke.",
   "main": "./dist/index.js",
   "types": "./dist/index.d.ts",
