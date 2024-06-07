@@ -8,9 +8,5 @@
     "forceConsistentCasingInFileNames": true,
     "strict": true,
     "skipLibCheck": true,
-    "allowSyntheticDefaultImports" : true,
-    "paths": {
-      "react": [ "./node_modules/@types/react" ]
-    }
   }
 }
