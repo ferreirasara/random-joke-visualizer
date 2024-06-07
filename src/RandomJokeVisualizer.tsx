@@ -1,3 +1,4 @@
+import React from "react";
 import { useCallback, useEffect, useState } from "react";
 
 interface Joke {
@@ -6,19 +7,16 @@ interface Joke {
   punchline: string;
   id: number;
 }
-const RandomJokeVisualizer = () => {
+export const RandomJokeVisualizer = () => {
   const [joke, setJoke] = useState<Joke | undefined>(undefined);
-  const [loading, setLoading] = useState<boolean>(false);
 
   const fetchJoke = useCallback(async () => {
-    setLoading(true);
     try {
       const res = await fetch(`https://official-joke-api.appspot.com/jokes/random`);
       setJoke(await res.json());
     } catch {
       setJoke(undefined);
     }
-    setLoading(false);
   }, [])
 
   useEffect(() => {
@@ -26,20 +24,21 @@ const RandomJokeVisualizer = () => {
   }, [fetchJoke]);
 
   return (
-    <div className="wrapper">
-      {loading || !joke
-        ? <span className="loader" />
-        : <>
-          <strong>
-            {joke?.setup}
-          </strong>
-          <i>
-            {joke?.punchline}
-          </i>
-        </>
-      }
-    </div>
+    joke ? <div style={{
+      'display': 'flex',
+      'flexDirection': 'column',
+      'gap': '10px',
+      'border': '1px solid #696969',
+      'borderRadius': '20px',
+      'width': 'fit-content',
+      'padding': '10px',
+    }}>
+      <strong>
+        {joke?.setup}
+      </strong>
+      <i>
+        {joke?.punchline}
+      </i>
+    </div > : null
   )
 }
-
-export default RandomJokeVisualizer;
